@@ -4,7 +4,7 @@ module.exports = {
     aliases: ["quotex", "qx"],
     version: "3.0",
     author: "xalman",
-    countDown: 10,
+    countDown: 5,
     role: 0,
     shortDescription: "Binary Options Trading Game",
     longDescription: "Predict market movement (up/down) and win virtual money.",
@@ -38,8 +38,8 @@ module.exports = {
     api.sendMessage(`📈 **QUOTEX TRADE STARTED**\n━━━━━━━━━━━━━━\n🎯 Prediction: ${prediction === 'up' ? '🟢 UP' : '🔴 DOWN'}\n💰 Amount: $${betAmount}\n⏳ Status: Analyzing Market...\n━━━━━━━━━━━━━━`, threadID);
 
     setTimeout(async () => {
-      const isWin = Math.random() > 0.40; // 48% Win chance
-      const payout = 1.50; // 90% Profit return
+      const isWin = Math.random() > 0.40;
+      const payout = 1.20;
 
       if (isWin) {
         const profit = Math.floor(betAmount * payout);
